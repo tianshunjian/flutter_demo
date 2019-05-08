@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 import 'model/product.dart';
 import 'login.dart';
+import 'chat/chat.dart';
 
 const double _kFlingVelocity = 2.0;
 
@@ -124,21 +125,21 @@ class _BackdropState extends State<Backdrop>
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (BuildContext context) => LoginPage(),
-              ),
+              builder: (BuildContext context) => LoginPage(),
+            ),
             );
           },
         ),
         IconButton(
           icon: Icon(
             Icons.tune,
-            semanticLabel: 'login',
+            semanticLabel: 'chat',
           ),
           onPressed: (){
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (BuildContext context) => LoginPage(),
+                builder: (BuildContext context) => Chat(),
               )
             );
           },

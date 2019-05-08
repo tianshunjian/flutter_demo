@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 import 'package:flutter_demo/app.dart';
-import 'chat/chat.dart';
 
 void main() => runApp(ShrineApp());
 
-//void main() => runApp(Chat());
 
 //void main() => runApp(MyApp());
 

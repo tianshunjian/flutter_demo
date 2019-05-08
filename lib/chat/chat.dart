@@ -13,7 +13,7 @@ class _ChatState extends State<Chat> with TickerProviderStateMixin {
   Widget _buildTextComposer(){
     return IconTheme(
       data: IconThemeData(
-        color: Theme.of(context).accentColor,
+        color: Theme.of(context).primaryColor,
       ),
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 8),
@@ -96,6 +96,12 @@ class _ChatState extends State<Chat> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('FriendlyChat'),
+      ),
+      body: SafeArea(child: _buildBody()),
+    );
     return MaterialApp(
       title: 'chat',
       home: Scaffold(
