@@ -102,15 +102,6 @@ class _ChatState extends State<Chat> with TickerProviderStateMixin {
       ),
       body: SafeArea(child: _buildBody()),
     );
-    return MaterialApp(
-      title: 'chat',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('FriendlyChat'),
-        ),
-        body: SafeArea(child: _buildBody()),
-      ),
-    );
   }
 }
 
