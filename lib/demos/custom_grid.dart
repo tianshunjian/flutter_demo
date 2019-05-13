@@ -17,7 +17,7 @@ class CustomGrid extends StatelessWidget {
 
     return products.map((product){
       return Card(
-        elevation: 0,
+        elevation: 1.0,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
