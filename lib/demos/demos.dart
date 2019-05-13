@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'image_network.dart';
+import 'custom_grid.dart';
 
 class Demos extends StatelessWidget {
-  final List<String> titles = ['Network Image','List2'];
+  final List<String> titles = ['Network Image','Grid View'];
 
   Widget _buildBody(){
     return ListView.builder(
@@ -15,6 +16,11 @@ class Demos extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (BuildContext context) => ImageNetwork())
+              );
+            } else if(index == 1) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => CustomGrid() )
               );
             }
           },
