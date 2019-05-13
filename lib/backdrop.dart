@@ -3,6 +3,7 @@ import 'package:meta/meta.dart';
 import 'model/product.dart';
 import 'login.dart';
 import 'chat/chat.dart';
+import 'demos/demos.dart';
 
 const double _kFlingVelocity = 2.0;
 
@@ -141,6 +142,20 @@ class _BackdropState extends State<Backdrop>
               MaterialPageRoute(
                 builder: (BuildContext context) => Chat(),
               )
+            );
+          },
+        ),
+        IconButton(
+          icon: Icon(
+            Icons.menu,
+            semanticLabel: 'demos',
+          ),
+          onPressed: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (BuildContext context) => Demos(),
+              ),
             );
           },
         ),
