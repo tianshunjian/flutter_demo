@@ -4,6 +4,9 @@ import 'custom_grid.dart';
 import 'tap_demo.dart';
 import 'delete_item.dart';
 import 'pass_params.dart';
+import 'animated_list.dart';
+import 'appbar_bottom_sample.dart';
+import 'appbar_menu.dart';
 
 class Demos extends StatelessWidget {
   final List<String> titles = [
@@ -11,7 +14,10 @@ class Demos extends StatelessWidget {
     'Grid View',
     'Gesture Detector',
     'Delete Item',
-    'Pass Params'
+    'Pass Params',
+    'AnimatedList',
+    'Bottom AppBar',
+    'Basic AppBar'
   ];
 
   Widget _buildBody(){
@@ -29,20 +35,35 @@ class Demos extends StatelessWidget {
             } else if(index == 1) {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => CustomGrid() )
+                MaterialPageRoute(builder: (context) => CustomGrid())
               );
             } else if(index == 2) {
               Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => TapDemo() )
+                  MaterialPageRoute(builder: (context) => TapDemo())
               );
             } else if(index == 3) {
               Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => DeleteItem() )
+                  MaterialPageRoute(builder: (context) => DeleteItem())
               );
             } else if(index == 4) {
               _navigateAndDisplaySelection(context);
+            } else if(index == 5) {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MyAnimatedList())
+              );
+            } else if(index == 6) {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AppBarBottomSample())
+              );
+            } else if(index == 7) {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => BasicAppBarSample())
+              );
             }
           },
         );
