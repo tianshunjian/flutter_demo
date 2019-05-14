@@ -7,6 +7,8 @@ import 'pass_params.dart';
 import 'animated_list.dart';
 import 'appbar_bottom_sample.dart';
 import 'appbar_menu.dart';
+import 'expansion_tile_sample.dart';
+import 'default_tabbar_samplae.dart';
 
 class Demos extends StatelessWidget {
   final List<String> titles = [
@@ -17,7 +19,9 @@ class Demos extends StatelessWidget {
     'Pass Params',
     'AnimatedList',
     'Bottom AppBar',
-    'Basic AppBar'
+    'Basic AppBar',
+    'ExpansionTile',
+    'DefaultTabBar'
   ];
 
   Widget _buildBody(){
@@ -63,6 +67,16 @@ class Demos extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => BasicAppBarSample())
+              );
+            } else if(index == 8) {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ExpansionTileSample())
+              );
+            } else if(index == 9) {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => TabbedAppBarSample())
               );
             }
           },
