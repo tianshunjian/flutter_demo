@@ -9,6 +9,7 @@ import 'appbar_bottom_sample.dart';
 import 'appbar_menu.dart';
 import 'expansion_tile_sample.dart';
 import 'default_tabbar_samplae.dart';
+import 'ui_demo.dart';
 
 class Demos extends StatelessWidget {
   final List<String> titles = [
@@ -21,7 +22,8 @@ class Demos extends StatelessWidget {
     'Bottom AppBar',
     'Basic AppBar',
     'ExpansionTile',
-    'DefaultTabBar'
+    'DefaultTabBar',
+    'UI Demo',
   ];
 
   Widget _buildBody(){
@@ -29,7 +31,13 @@ class Demos extends StatelessWidget {
       itemCount: titles.length,
       itemBuilder: (context,index){
         return ListTile(
-          title: Text(titles[index]),
+          title: Center(
+            child: Text(titles[index])
+          ),
+          trailing: Icon(
+            Icons.arrow_forward_ios,
+            size: 14,
+          ),
           onTap: (){
             if(index == 0) {
               Navigator.push(
@@ -77,6 +85,11 @@ class Demos extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => TabbedAppBarSample())
+              );
+            } else if(index == 10) {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => UIDemo())
               );
             }
           },
