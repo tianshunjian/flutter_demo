@@ -12,6 +12,7 @@ import 'default_tabbar_samplae.dart';
 import 'ui_demo.dart';
 import 'animation_demos.dart';
 import 'hero_demo.dart';
+import 'hero_radial.dart';
 
 class Demos extends StatelessWidget {
   final List<String> titles = [
@@ -27,7 +28,8 @@ class Demos extends StatelessWidget {
     'DefaultTabBar',
     'UI Demo',
     'Animation Demos',
-    'Hero Demo'
+    'Hero Demo',
+    'Hero Radial Demo',
   ];
 
   Widget _buildBody(){
@@ -104,6 +106,11 @@ class Demos extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => HeroDemo())
+              );
+            } else if(index == 13) {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RadialExpansionDemo())
               );
             }
           },
